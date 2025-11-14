@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><meta charset="UTF-8"><title>Itens do Pedido</title></head>
+<body>
+    <h1>Itens dos Pedidos</h1>
+    <table border="1">
+        <tr><th>ID Pedido</th><th>Cliente</th><th>Produto</th><th>Quantidade</th><th>Preço Unitário</th></tr>
+        {% for item in itens %}
+        <tr>
+            <td>{{ item.ID_Pedido }}</td>
+            <td>{{ item.Cliente }}</td>
+            <td>{{ item.Nome_Produto }}</td>
+            <td>{{ item.Quantidade }}</td>
+            <td>{{ item.Preco_Unitario }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Endereço</th>
+            <th>Telefone</th>
+        </tr>
+        {% for cliente in clientes %}
+        <tr>
+            <td>{{ cliente.ID_Cliente }}</td>
+            <td>{{ cliente.Nome }}</td>
+            <td>{{ cliente.Email }}</td>
+            <td>{{ cliente.Endereco }}</td>
+            <td>{{ cliente.Telefone }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
