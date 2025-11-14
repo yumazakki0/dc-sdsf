@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><meta charset="UTF-8"><title>Pedidos</title></head>
+<body>
+    <h1>Lista de Pedidos</h1>
+    <table border="1">
+        <tr><th>ID</th><th>Cliente</th><th>Data</th><th>Valor</th><th>Entrega</th><th>Status</th></tr>
+        {% for pedido in pedidos %}
+        <tr>
+            <td>{{ pedido.ID_Pedido }}</td>
+            <td>{{ pedido.ID_Cliente_FK }}</td>
+            <td>{{ pedido.Data_Pedido }}</td>
+            <td>{{ pedido.Valor_Total }}</td>
+            <td>{{ pedido.Previsao_Entrega }}</td>
+            <td>{{ pedido.Status_Pedido }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
